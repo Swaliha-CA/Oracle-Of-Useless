@@ -79,7 +79,7 @@ The live demo link shows all the interactive features, including the changing mo
 
 Additional Demos
 Not Applicable
-GITHUB:-
+GITHUB:-gh repo clone Swaliha-CA/Oracle-Of-Useless
 
 Team Contributions
 SWALIHA.C.A: Solely responsible for the entire project, including concept ideation, front-end development (HTML, CSS, JavaScript), UI/UX design, creating all animations and interactive features, and deployment.
