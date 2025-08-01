@@ -40,6 +40,7 @@ Not Applicable (This is a software-only project)
 Implementation
 For Software:
 
+
 Installation
 Since this is a vanilla HTML, CSS, and JavaScript project, there are no installation commands required. Simply download the index.html, style.css, and script.js files and place them in the same folder.
 
