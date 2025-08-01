@@ -9,13 +9,16 @@ Team Name: SF
 Team Members:
 Team Lead: SWALIHA.C.A - Adi Shankara Institute of Engineering and Technology, Kalady
 
-Project Description
+Project Description:
+
 The Oracle of Nonsense is a creative and beautifully useless web toy designed for entertainment. Interact with a cosmic oracle that tells jokes, reveals nonsensical prophecies, and reads your digital aura in different languages and moods.
 
-The Problem (that doesn't exist)
+The Problem (that doesn't exist):
+
 In a world saturated with productivity apps and solutions to optimize every second, we identified a critical, overlooked crisis: a profound lack of beautiful, pointless digital experiences. This project exists not to solve problems, but to be a delightful, interactive piece of digital art—a testament to the joy of creative, useless things.
 
-The Solution (that nobody asked for)
+The Solution (that nobody asked for):
+
 To combat the plague of practicality, we engineered The Oracle of Nonsense—a digital entity that operates on a strict diet of chaos and creativity. Instead of logical outputs, it offers a suite of beautifully useless features like a moody oracle, unsolicited prophecies, cosmic humor, and a button designed for pure chaos.
 
 Technical Details
