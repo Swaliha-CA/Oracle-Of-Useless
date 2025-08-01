@@ -12,13 +12,12 @@ const pointlessJudgments = [
     "Weak: This password has bad energy.",
     "Weak: My cat could type a better password.",
     "Weak: Not a palindrome. Lacks reflective quality.",
-    "Weak: Passwords are not accepted after 6 PM in Kerala.",
-    "Weak: Too symmetrical.",
+    "Weak: Too symmetrical. Needs more artistic flair.",
     "Weak: Not enough chaos.",
     "Weak: I've seen this one before. Be original.",
     "Weak: This password is not gluten-free.",
     "Weak: Does not spark joy.",
-    "Weak: It's Friday. This password has a very 'Monday' vibe."
+    "Weak: A bit bland for a Friday night, don't you think?"
 ];
 const uselessWords = ['banana', 'wobble', 'fluff', 'potato', 'giggle', 'moist', 'yeet', 'shenanigans', '🦄', ' '];
 
@@ -54,6 +53,30 @@ function triggerScreenShake() {
     }, 300);
 }
 
+/**
+ * NEW: A function to play a random synthesized sound using the Web Audio API.
+ */
+function playNonsenseSound() {
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const oscillator = audioCtx.createOscillator();
+    const gainNode = audioCtx.createGain();
+
+    // Random sound properties
+    const randomType = ['sine', 'square', 'sawtooth', 'triangle'][Math.floor(Math.random() * 4)];
+    const randomFreq = Math.random() * 800 + 200; // a frequency between 200 and 1000 Hz
+    
+    oscillator.type = randomType;
+    oscillator.frequency.setValueAtTime(randomFreq, audioCtx.currentTime);
+    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime); // Lower volume
+    gainNode.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + 0.5);
+
+    oscillator.connect(gainNode);
+    gainNode.connect(audioCtx.destination);
+    
+    oscillator.start();
+    oscillator.stop(audioCtx.currentTime + 0.5);
+}
+
 
 // --- Event Listeners ---
 
@@ -74,8 +97,14 @@ passwordInput.addEventListener('input', () => {
 
     // Add a delay to make it more annoying
     judgmentTimeout = setTimeout(() => {
-        const randomIndex = Math.floor(Math.random() * pointlessJudgments.length);
-        const judgment = pointlessJudgments[randomIndex];
+        let judgment;
+        // Check for the Kerala time-specific rule
+        if (new Date().getHours() >= 18) { // It's after 6 PM
+             judgment = "Weak: Passwords are not accepted after 6 PM in Kerala.";
+        } else {
+            const randomIndex = Math.floor(Math.random() * pointlessJudgments.length);
+            judgment = pointlessJudgments[randomIndex];
+        }
         
         feedbackDiv.className = 'feedback feedback-weak';
         typeWriter(feedbackDiv, judgment); // Use the new typewriter effect
@@ -86,7 +115,7 @@ passwordInput.addEventListener('input', () => {
 
 // Listen for clicks on the chaotic generate button
 generateButton.addEventListener('click', () => {
-    const action = Math.floor(Math.random() * 5); // Now 5 possible actions
+    const action = Math.floor(Math.random() * 7); // Now 7 possible actions
 
     switch (action) {
         case 0:
@@ -109,11 +138,21 @@ generateButton.addEventListener('click', () => {
             }, 3000);
             break;
         case 4:
-            // New Action: Invert the page colors for a moment
             document.body.style.filter = 'invert(1)';
             setTimeout(() => {
                 document.body.style.filter = '';
             }, 500);
+            break;
+        case 5:
+            // New Action: Play a random sound
+            playNonsenseSound();
+            break;
+        case 6:
+            // New Action: Temporarily change the font to something unreadable
+            document.body.style.fontFamily = 'Wingdings, "Comic Neue"';
+            setTimeout(() => {
+                document.body.style.fontFamily = '"Comic Neue", "Comic Sans MS", "Chalkboard SE", sans-serif';
+            }, 2000);
             break;
     }
     
