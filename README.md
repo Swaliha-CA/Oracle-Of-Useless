@@ -1,9 +1,12 @@
 <img width="3188" height="1202" alt="frame (3)" src="https://github.com/user-attachments/assets/517ad8e9-ad22-457d-9538-a9e62d137cd7" />
 
 The Oracle of Nonsense 🎯
+
+
 Basic Details
 Team Name: SF
-Team Members
+
+Team Members:
 Team Lead: SWALIHA.C.A - Adi Shankara Institute of Engineering and Technology, Kalady
 
 Project Description
