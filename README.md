@@ -1,5 +1,3 @@
-# Oracle-Of-Useless
-The Oracle of Nonsense: A web experiment in chaotic design and beautifully useless feedback.
 # The Oracle of Nonsense
 
 Welcome to **The Oracle of Nonsense**, a web experiment in chaotic design and beautifully useless feedback. This project is a "password strength judger" that intentionally subverts user expectations for a hilariously pointless experience.
