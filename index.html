@@ -9,24 +9,40 @@
 </head>
 <body>
 
-    <!-- Elements for the new background effects -->
+    <!-- Elements for the background effects -->
     <div class="aurora"></div>
     <div class="stars"></div>
     <div class="stars-2"></div>
 
     <div class="container">
-        <h1>The Oracle of Nonsense</h1>
-        <p>Where your password is never good enough.</p>
+        <div class="header-controls">
+            <!-- New Language Selector -->
+            <select id="languageSelector">
+                <option value="en">English</option>
+                <option value="ml">മലയാളം (Malayalam)</option>
+            </select>
+            <div id="moodIndicator" data-lang-key="moodPrefix">The Oracle is feeling...</div>
+        </div>
+
+        <h1 data-lang-key="title">The Oracle of Nonsense</h1>
+        <p data-lang-key="subtitle">Where your password is never good enough.</p>
         
         <div class="input-container">
-            <input type="text" id="passwordInput" placeholder="Enter password to be judged...">
+            <input type="text" id="passwordInput" data-lang-key="inputPlaceholder" placeholder="Enter password to be judged...">
         </div>
         
         <div id="feedback">
-            <p>Awaiting judgement...</p>
+            <p data-lang-key="awaitingJudgement">Awaiting judgement...</p>
         </div>
 
-        <button id="generateButton">Generate "Secure" Password</button>
+        <div id="auraDisplay"></div>
+
+        <div class="button-grid">
+            <button id="generateButton" data-lang-key="generateButton">Generate</button>
+            <button id="prophecyButton" data-lang-key="prophecyButton">Prophecy</button>
+            <button id="jokeButton" data-lang-key="jokeButton">Cosmic Joke</button>
+            <button id="auraButton" data-lang-key="auraButton">Read Aura</button>
+        </div>
     </div>
 
     <!-- Link to your JavaScript file -->
