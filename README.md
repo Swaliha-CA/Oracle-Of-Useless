@@ -62,15 +62,9 @@ The "Read Aura" feature in action, displaying a unique color palette and a creat
 <img width="1666" height="940" alt="Screenshot 2025-08-02 013035" src="https://github.com/user-attachments/assets/18b73a1b-e28a-4154-8031-baaa3ad62a39" />
 
 
-
-
 Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
 This diagram shows the simple client-side architecture. The user interacts with the index.html file, which is styled by style.css and powered by script.js. All logic, including the dialogues and animations, is handled directly in the user's browser.
-
-For Hardware:
-
-Not Applicable
 
 Project Demo
 Video
@@ -82,6 +76,7 @@ Not Applicable
 GITHUB:-https://github.com/Swaliha-CA/Oracle-Of-Useless
 
 Team Contributions
+
 SWALIHA.C.A: Solely responsible for the entire project, including concept ideation, front-end development (HTML, CSS, JavaScript), UI/UX design, creating all animations and interactive features, and deployment.
 
 Made with ❤️ at TinkerHub Useless Projects
